@@ -1,18 +1,16 @@
 package thermostat;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 class ThermostatTest {
 
-	@Test
-	void testAdvance(){
-		thermostat.Thermostat();
-		Thermostat.advance();
-		assertsEquals("partOfDay es: Sleep");
-		Thermostat.advance();
-		assertsEquals("partOfDay es: Wake");
+	@Test void testAdvance(){
+		Thermostat thermo = new Thermostat();
+		thermo.advance();
+		assertEquals("Part es Sleep", thermo.getPart(), "Sleep");
+		thermo.advance();
+		assertEquals("partOfDay es Wake", thermo.getPart(), "Wake");
 	}
 
 }
