@@ -33,7 +33,7 @@ public class Stutter
       String fileName;
       FileReader myFile;
       BufferedReader inFile = null;
-   
+
       if (args.length == 0)
       {  // no file, use stdin
          inFile = new BufferedReader (new InputStreamReader (System.in));

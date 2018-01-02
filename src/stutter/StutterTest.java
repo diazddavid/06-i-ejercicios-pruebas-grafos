@@ -57,8 +57,8 @@ public class StutterTest {
 
     @Test
     public void testFromFile() {
-        try {
-            Stutter.main(new String[] { "inputFile" });
+    	try {
+            Stutter.main(new String[] {"/home/ddiaz/eclipse-workspace/stutter/src/stutter/prueba.txt"});
         } catch (IOException e) {
             fail(e.getMessage());
         }
@@ -128,11 +128,6 @@ public class StutterTest {
       assertEquals("Repeated word on line 3: hi hi\n", outContent.toString());
       
       System.setIn(System.in);
-  }
-  
-  @Test
-  public void t5() {
-	  
   }
 
 }
