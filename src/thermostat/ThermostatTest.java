@@ -22,8 +22,16 @@ class ThermostatTest {
 		assertEquals("Temp es High", thermo.getTemp(), "High");
 		thermo.up();
 		assertEquals("Temp sigue siendo High", thermo.getTemp(), "High");
-	
-		
 	}
-
+	
+	@Test void testDown() {
+		Thermostat thermo = new Thermostat();
+		
+		assertEquals("Temp es Low", thermo.getTemp(), "Low");
+		thermo.up();
+		thermo.down();
+		assertEquals("Temp sigue siendo Low", thermo.getTemp(), "Low");
+		thermo.down();
+		assertEquals("Temp de nuevo es Low", thermo.getTemp(), "Low");
+	}
 }
