@@ -20,6 +20,8 @@ class ThermostatTest {
 		assertEquals("Temp es Low", thermo.getTemp(), "Low");
 		thermo.up();
 		assertEquals("Temp es High", thermo.getTemp(), "High");
+		thermo.up();
+		assertEquals("Temp sigue siendo High", thermo.getTemp(), "High");
 	
 		
 	}
