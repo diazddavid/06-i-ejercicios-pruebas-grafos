@@ -35,3 +35,4 @@ class ThermostatTest {
 		assertEquals("Temp de nuevo es Low", thermo.getTemp(), "Low");
 	}
 }
+	
