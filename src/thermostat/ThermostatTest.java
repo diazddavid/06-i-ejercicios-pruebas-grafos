@@ -8,9 +8,20 @@ class ThermostatTest {
 	@Test void testAdvance(){
 		Thermostat thermo = new Thermostat();
 		thermo.advance();
-		assertEquals("Part es Sleep", thermo.getPart(), "Sleep");
+		
+		assertEquals("partOfDay es Sleep", thermo.getPart(), "Sleep");
 		thermo.advance();
 		assertEquals("partOfDay es Wake", thermo.getPart(), "Wake");
+	}
+	
+	@Test void testUp() {
+		Thermostat thermo = new Thermostat();
+		
+		assertEquals("Temp es Low", thermo.getTemp(), "Low");
+		thermo.up();
+		assertEquals("Temp es High", thermo.getTemp(), "High");
+	
+		
 	}
 
 }
